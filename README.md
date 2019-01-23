@@ -1,4 +1,4 @@
-This is an example kotlin project with a few fun technologies tied together. It also shows off how fast native images can be.
+This is an example kotlin project with a few fun technologies tied together including GraalVM / SubstrateVM for native image building, Gradle 5 + Kotlin Gradle DSL, Kotlin 1.3 and kotlinx.serialization. It also shows off how fast native images can be.
 
 
 Use `./gradlew nativeImage` to build a native image, `./gradlew installDist` to build a JAR and a wrapper script or `./gradlew installShadowDist` to build a fat/shadow JAR and wrapper script.
