@@ -1,3 +1,4 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 /*
@@ -32,7 +33,6 @@ val mainClassName = "me.seanabraham.AppKt"
 
 application.mainClassName = mainClassName
 
-
 graal {
     mainClass(mainClassName)
     outputName("hello-speedy-world")
@@ -40,4 +40,8 @@ graal {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+tasks.withType<ShadowJar> {
+    archiveClassifier.set("all")
 }
